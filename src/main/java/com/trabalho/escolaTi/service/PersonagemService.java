@@ -28,9 +28,16 @@ public class PersonagemService {
         return  ResponseEntity.ok(allPersonagens);
     }
 
-    // GET
-    public ResponseEntity<Optional<Personagem>> getPersonagemById() {
+    // GET-ID
+    public ResponseEntity<Optional<Personagem>> getPersonagemById(Long id) {
+        Optional<Personagem> getPersonagemById = personagemRepository.findById(id);
+        return ResponseEntity.ok(getPersonagemById);
+    }
 
+    // DELETE
+    public ResponseEntity<?> deleteProdutoById(Long id) {
+        personagemRepository.deleteById(id);
+        return ResponseEntity.ok("Deletado com sucesso!");
     }
 
 }
