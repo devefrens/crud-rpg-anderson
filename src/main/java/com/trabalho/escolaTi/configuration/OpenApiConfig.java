@@ -11,10 +11,10 @@ public class OpenApiConfig {
     @Bean
     public OpenAPI testeOpenApi() {
         return new OpenAPI()
-                .info(new Info()
-                        .title("Crud Escola TI")
-                        .version("1.0.0")
-                        .description("Crud trabalho 5º semestre")
-                );
+        .info(new Info()
+                .title("Crud Escola TI")
+                .version("1.0.0")
+                .description("Crud trabalho 5º semestre")
+        );
     }
 }
